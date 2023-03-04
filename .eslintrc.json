@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": false
+    },
+    "extends": ["eslint-config-prettier", "eslint:recommended", "plugin:prettier/recommended"],
+
+    "plugins": ["prettier", "prettier-plugin-hbs"],
+    "rules": {
+        "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+    },
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module"
+    }   
+}

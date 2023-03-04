@@ -1,0 +1,19 @@
+html {
+  max-width: 720px;
+}
+
+body {
+  margin: 32px;
+  background: #fff;
+}
+
+main,
+header,
+footer,
+nav {
+  margin: 32px;
+}
+
+section {
+  padding: 16px;
+}
