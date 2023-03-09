@@ -1,56 +1,32 @@
 {{!-- 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
 <div>
-    <header>
-        <div>
-            <h1>Dmytro Ivanov | Resume</h1>
-        </div>
-        <div>
-            <b>Junior Fullstack JS Developer</b>
-        </div>
-        <br>
-        <hr>
-    </header>
+    {{#with main}}
+        <main>
+            <section>
+                {{> title data=summary.title big=true}}
+                <div>
+                    <p>
+                        {{summary.text}}
+                    </p>
+                </div>
+            </section>
 
-    <main>
-        <section>
-            <div>
-                <h2>Summary</h2>
-            </div>
-            <div>
-                <p>
-                    Open-minded for new technologies, with 1 years of experience in development. Whenever I start to
-                    work on a new project I learn the domain and try to understand the idea of the project. Good team
-                    player, every colleague is a friend to me.
-                </p>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <h2>Other experience</h2>
-            </div>
-            <div>
-                <p>
-                    Pet project for parsing sport betting data from different platforms ( odds ) and sport statistics (
-                    tournament position, goals etc), analyzing by simple mathematics models and preparing probability
-                    for such events like: money line - first win / draw / second win, totals etc.
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <hr>
-        <br>
-        <a href="mailto:dmytro@mail.com">dmytro@mail.com</a> /
-        <a href="tel:+380670000123">+380670000123</a> /
-        <a href="https://www.linkedin.com/in/dmytro-test" target="_blank">LinkedIn</a>
-    </footer>
-
+            {{#with experience}}
+                <section>
+                    {{> title data=title}}
+                    <div>
+                        <p>
+                            {{text}}
+                        </p>
+                    </div>
+                </section>
+            {{/with}}
+        </main>
+    {{/with}}
 </div>
 
 {{!-- 
