@@ -1,0 +1,23 @@
+{{!-- 
+  Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
+  І котрий обгортає код container файлів для будь-яких ендпоїнтів
+--}}
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+			Person page
+		</title>
+		<meta charset='utf-8' />
+		<link href='css/index.css' rel='stylesheet' />
+	</head>
+
+	<body>
+
+		{{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   --}}
+		{{{body}}}
+
+	</body>
+
+</html>
