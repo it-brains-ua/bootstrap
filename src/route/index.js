@@ -47,8 +47,8 @@ router.get('/task31', function (req, res) {
       cards: [
         {
           picture: {
-            src: 'https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png',
-            alt: 'Bootsrap',
+            src: 'https://picsum.photos/400/200',
+            alt: 'New York',
           },
           title: 'New York City',
           description:
@@ -60,8 +60,8 @@ router.get('/task31', function (req, res) {
         },
         {
           picture: {
-            src: 'img2.jpg',
-            alt: 'Image 2',
+            src: 'https://picsum.photos/400/200',
+            alt: 'Paris',
           },
           title: 'Paris',
           description:
@@ -73,8 +73,8 @@ router.get('/task31', function (req, res) {
         },
         {
           picture: {
-            src: 'img3.jpg',
-            alt: 'Image 3',
+            src: 'https://picsum.photos/400/200',
+            alt: 'Tokyo',
           },
           title: 'Tokyo',
           description:
@@ -86,8 +86,8 @@ router.get('/task31', function (req, res) {
         },
         {
           picture: {
-            src: 'img4.jpg',
-            alt: 'Image 4',
+            src: 'https://picsum.photos/400/200',
+            alt: 'Sydney',
           },
           title: 'Sydney',
           description:
@@ -233,7 +233,6 @@ router.get('/task31', function (req, res) {
         {
           name: 'Twitter',
           link: 'https://twitter.com/',
-          icon: 'fab fa-twitter',
         },
         {
           name: 'Instagram',
