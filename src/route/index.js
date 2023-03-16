@@ -195,20 +195,23 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
-    proposition: [
-      {
-        header: 'Our Approach',
-        title: 'Innovative Solutions for Your Business',
-        description:
-          'We create effective solutions that cater to your business needs.',
-      },
-      {
-        header: 'Our Expertise',
-        title: 'Trusted and Experienced Professionals',
-        description:
-          'Our team of experts delivers tailored strategies for best results.',
-      },
-    ],
+    proposition: {
+      title: 'Proposition',
+      card: [
+        {
+          header: 'Our Approach',
+          title: 'Innovative Solutions for Your Business',
+          description:
+            'We create effective solutions that cater to your business needs.',
+        },
+        {
+          header: 'Our Expertise',
+          title: 'Trusted and Experienced Professionals',
+          description:
+            'Our team of experts delivers tailored strategies for best results.',
+        },
+      ],
+    },
     footer: {
       title: 'Navigation',
       navigation: [
