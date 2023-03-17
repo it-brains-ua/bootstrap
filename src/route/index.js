@@ -29,9 +29,7 @@ router.get('/shophome', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-      icon: {
-        src: 'https://picsum.photos/400/200',
-      },
+      Logo: 'Logo',
     },
 
     newsBlock: {
@@ -102,10 +100,26 @@ router.get('/shophome', function (req, res) {
 
     goodsBlock: {
       tabs: [
-        'Electronics',
-        'Home & Kitchen',
-        'Clothing & Accessories',
-        'Toys & Games',
+        {
+          isActive: true,
+          isDisabled: false,
+          text: 'Electronics',
+        },
+        {
+          isActive: false,
+          isDisabled: false,
+          text: 'Home & Kitchen',
+        },
+        {
+          isActive: false,
+          isDisabled: false,
+          text: 'Clothing & Accessories',
+        },
+        {
+          isActive: false,
+          isDisabled: true,
+          text: 'Toys & Games',
+        },
       ],
       cards: [
         {
