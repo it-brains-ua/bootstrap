@@ -123,7 +123,7 @@ router.get('/shophome', function (req, res) {
       ],
       cards: [
         {
-          image: 'https://www.google.com/',
+          image: 'https://picsum.photos/400/200',
           title: 'iPhone 13',
           description:
             'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
@@ -131,7 +131,7 @@ router.get('/shophome', function (req, res) {
           idNew: false,
         },
         {
-          image: 'https://www.google.com/',
+          image: 'https://picsum.photos/400/200',
           title: 'MacBook Pro',
           description:
             "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
@@ -139,7 +139,7 @@ router.get('/shophome', function (req, res) {
           idNew: false,
         },
         {
-          image: 'https://www.google.com/',
+          image: 'https://picsum.photos/400/200',
           title: 'AirPods Pro',
           description:
             "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
@@ -147,7 +147,7 @@ router.get('/shophome', function (req, res) {
           idNew: false,
         },
         {
-          image: 'https://www.google.com/',
+          image: 'https://picsum.photos/400/200',
           title: 'Sony Bravia XR A90J',
           description:
             'This OLED TV boasts a 4K resolution, HDR support, and a high refresh rate for smooth motion handling.',
@@ -155,7 +155,7 @@ router.get('/shophome', function (req, res) {
           idNew: true,
         },
         {
-          image: 'https://www.google.com/',
+          image: 'https://picsum.photos/400/200',
           title: 'Nintendo Switch OLED Model',
           description:
             'The latest iteration of the popular gaming console features a larger OLED screen and improved audio quality.',
@@ -163,7 +163,7 @@ router.get('/shophome', function (req, res) {
           idNew: false,
         },
         {
-          image: 'https://www.google.com/',
+          image: 'https://picsum.photos/400/200',
           title: 'Bose SoundLink Revolve+',
           description:
             'This portable Bluetooth speaker features 360-degree sound, water-resistant construction, and up to 16 hours of battery life.',
