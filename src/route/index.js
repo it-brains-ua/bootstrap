@@ -90,64 +90,28 @@ router.get('/shopproduct', function (req, res) {
       title: 'See other products',
       cards: [
         {
-          title: 'COVID-19 Vaccinations Begin in Europe',
+          image: 'https://picsum.photos/400/200',
+          title: 'iPhone 13',
           description:
-            'As the world continues to grapple with the ongoing COVID-19 pandemic, Europe begins its vaccination rollout, with healthcare workers and the elderly among the first to receive the vaccine.',
-          isTop: false,
+            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
+          isHot: false,
           idNew: false,
         },
         {
-          title: 'Tesla Stock Surges After Record Sales',
+          image: 'https://picsum.photos/400/200',
+          title: 'MacBook Pro',
           description:
-            "Tesla's stock price jumps 10% following the company's announcement of record sales in the last quarter, thanks in part to strong demand for its electric vehicles.",
-          isTop: true,
-          idNew: true,
-        },
-        {
-          title:
-            'New Study Shows Benefits of Meditation for Mental Health',
-          description:
-            'A new study published in the Journal of the American Medical Association finds that practicing mindfulness meditation can lead to improved mental health outcomes for people struggling with depression and anxiety.',
-          isTop: false,
+            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
+          isHot: true,
           idNew: false,
         },
         {
-          title: 'NASA Launches New Mars Rover',
+          image: 'https://picsum.photos/400/200',
+          title: 'AirPods Pro',
           description:
-            "NASA's Perseverance rover successfully launches on a mission to explore Mars, with the goal of collecting samples of the planet's surface and searching for signs of ancient microbial life.",
-          isTop: false,
-          idNew: true,
-        },
-        {
-          title:
-            'GameStop Shares Soar as Reddit Traders Rally',
-          description:
-            'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
-          isTop: false,
+            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
+          isHot: false,
           idNew: false,
-        },
-        {
-          title:
-            'UK Announces Plan to Ban Sale of Gas-Powered Cars by 2030',
-          description:
-            'In an effort to combat climate change, the UK government announces a plan to ban the sale of new gas-powered cars and vans by 2030, with hybrid vehicles to follow in 2035.',
-          isTop: true,
-          idNew: false,
-        },
-        {
-          title:
-            'New Study Shows Link Between Exercise and Longevity',
-          description:
-            'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
-          isTop: false,
-          idNew: false,
-        },
-        {
-          title: 'Amazon Expands Grocery Delivery Service',
-          description:
-            'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
-          isTop: false,
-          idNew: true,
         },
       ],
     },
