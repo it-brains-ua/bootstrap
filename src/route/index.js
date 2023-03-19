@@ -75,28 +75,6 @@ router.get('/shopnews', function (req, res) {
       title: 'See other news',
       cards: [
         {
-          title: 'COVID-19 Vaccinations Begin in Europe',
-          description:
-            'As the world continues to grapple with the ongoing COVID-19 pandemic, Europe begins its vaccination rollout, with healthcare workers and the elderly among the first to receive the vaccine.',
-          isTop: false,
-          idNew: false,
-        },
-        {
-          title: 'Tesla Stock Surges After Record Sales',
-          description:
-            "Tesla's stock price jumps 10% following the company's announcement of record sales in the last quarter, thanks in part to strong demand for its electric vehicles.",
-          isTop: true,
-          idNew: true,
-        },
-        {
-          title:
-            'New Study Shows Benefits of Meditation for Mental Health',
-          description:
-            'A new study published in the Journal of the American Medical Association finds that practicing mindfulness meditation can lead to improved mental health outcomes for people struggling with depression and anxiety.',
-          isTop: false,
-          idNew: false,
-        },
-        {
           title: 'NASA Launches New Mars Rover',
           description:
             "NASA's Perseverance rover successfully launches on a mission to explore Mars, with the goal of collecting samples of the planet's surface and searching for signs of ancient microbial life.",
@@ -109,14 +87,6 @@ router.get('/shopnews', function (req, res) {
           description:
             'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
           isTop: false,
-          idNew: false,
-        },
-        {
-          title:
-            'UK Announces Plan to Ban Sale of Gas-Powered Cars by 2030',
-          description:
-            'In an effort to combat climate change, the UK government announces a plan to ban the sale of new gas-powered cars and vans by 2030, with hybrid vehicles to follow in 2035.',
-          isTop: true,
           idNew: false,
         },
         {
