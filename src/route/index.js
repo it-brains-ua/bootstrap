@@ -28,99 +28,245 @@ router.get('/shopnews', function (req, res) {
           text: 'Help',
           href: 'https://www.youtube.com/',
         },
+        {
+          text: 'Exit',
+          href: null,
+        },
       ],
       Logo: 'Logo',
     },
 
-    breadcrumb: [
-      { name: 'Home', url: 'https://github.com/' },
-      { name: 'News', url: 'https://www.google.com/' },
-      { name: 'Today', url: 'https://github.com/' },
-      { name: 'About cats', url: null },
-    ],
+    header: 'Оформлення замовлення',
+    contacts_data: {
+      title: 'Контактні дані',
 
-    newsData: {
-      photo: 'https://picsum.photos/400/200',
-
-      head: {
-        heading: 'About cats',
-        description:
-          "Cats are adorable and beloved pets that have been domesticated for thousands of years. They are known for their independent and playful nature, as well as their agility and hunting skills. With their soft fur, purring, and cuddling, cats make great companions and can bring joy and relaxation to their owners. From domestic short-hairs to exotic breeds, cats come in many shapes, sizes, and colors, each with their own unique personalities. Whether they are napping in a sunny spot or chasing a toy, cats always bring a smile to their owner's faces.",
-      },
-
-      body: [
-        {
-          title: 'Cats have a keen sense of hearing',
-          text: 'With their highly sensitive ears, cats can detect sounds that are too faint for humans to hear, including the ultrasonic calls of rodents and other small prey.',
-        },
-        {
-          title: 'Cats are natural hunters',
-          text: 'Thanks to their sharp claws, quick reflexes, and stealthy movements, cats are excellent hunters. They can catch mice, rats, birds, and other prey with ease.',
-        },
-        {
-          title: 'Cats are independent creatures',
-          text: "Cats are known for their independent nature, and unlike dogs, they don't require constant attention and affection from their owners. They are perfectly content to entertain themselves with toys and explore their surroundings on their own.",
-        },
-        {
-          title: 'Cats have a unique way of communicating',
-          text: 'From meows and purrs to chirps and trills, cats use a variety of sounds to communicate with their owners and other cats. They also use body language, such as tail movements and ear positions, to convey their moods and intentions.',
-        },
-        {
-          title: 'Cats are good for your health',
-          text: 'Studies have shown that owning a cat can have numerous health benefits, including lower stress levels, reduced risk of heart disease and stroke, and improved mental health. Plus, cats make great companions and can provide a source of comfort and emotional support.',
-        },
-      ],
-    },
-
-    newsOtherBlock: {
-      title: 'See other news',
-      cards: [
-        {
-          title: 'NASA Launches New Mars Rover',
-          description:
-            "NASA's Perseverance rover successfully launches on a mission to explore Mars, with the goal of collecting samples of the planet's surface and searching for signs of ancient microbial life.",
-          isTop: false,
-          idNew: true,
-        },
-        {
-          title:
-            'GameStop Shares Soar as Reddit Traders Rally',
-          description:
-            'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
-          isTop: false,
-          idNew: false,
-        },
-        {
-          title:
-            'New Study Shows Link Between Exercise and Longevity',
-          description:
-            'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
-          isTop: false,
-          idNew: false,
-        },
-        {
-          title: 'Amazon Expands Grocery Delivery Service',
-          description:
-            'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
-          isTop: false,
-          idNew: true,
-        },
-      ],
-    },
-
-    service: {
-      title: 'Our Services',
-      description:
-        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
       buttons: [
         {
-          text: 'Show More',
-          link: 'https://www.youtube.com/',
-          rel: 'show-more',
+          text: 'Я новий покупець',
+          isPrimary: true,
+        },
+        {
+          text: 'Я постійний покупець',
+          isOutline: true,
+        },
+      ],
+      form: {
+        input: {
+          surname: {
+            lable: 'Прізвище',
+            placeholder: 'Іванов',
+            caption: 'Введіть прізвище',
+          },
+          name: {
+            lable: 'Ім’я',
+            placeholder: 'Іван',
+            caption: 'Введіть Ім’я',
+          },
+          phone: {
+            lable: 'Мобільний телефон',
+            caption: 'Введіть телефон',
+          },
+          email: {
+            lable: 'Пошта',
+            placeholder: 'ivanivanov@ukr.net',
+            caption: 'Введіть Пошту',
+          },
+        },
+        switch: [
+          {
+            text: 'Отримувати інформацію про новинки',
+            isActive: false,
+          },
+          {
+            text: 'Отримувати інформацію про знижки',
+            isActive: true,
+          },
+        ],
+      },
+    },
+    action_block: [
+      { text: 'Швидке замовлення', isPrimary: true },
+      { text: 'Видалити', isDanger: true },
+      { text: 'Детальніше', isInfo: true },
+    ],
+    total: {
+      title: 'Всього',
+      item_list: [
+        { name: 'Ноут', price: '25 000 ₴' },
+        { name: 'Мишка', price: '25 000 ₴' },
+        { name: 'Клава', price: '25 000 ₴' },
+      ],
+      additional_info: [
+        { text: 'Всього товарів', value: '75 000 ₴' },
+        { text: 'Купони', value: 'Немає' },
+        { text: 'Доставка', value: 'Безкоштовно' },
+      ],
+      total_price: {
+        text: 'Всього товарів',
+        value: '75 000 ₴',
+      },
+      button: [
+        {
+          text: 'Підтвердити замовлення',
+          isPrimary: true,
+        },
+        {
+          text: 'Відмінити купони',
+          isOutline: true,
         },
       ],
     },
-
+    delivery: {
+      title: 'Доставка',
+      select: [
+        {
+          label: 'Місто доставки',
+          placeholder: 'Оберіть місто доставки',
+          options: [
+            { value: '1', text: 'Київ' },
+            { value: '2', text: 'Харків' },
+            { value: '3', text: 'Одеса' },
+            { value: '4', text: 'Львів' },
+            { value: '5', text: 'Дніпро' },
+            { value: '6', text: 'Донецьк' },
+          ],
+        },
+        {
+          label: 'Район доставки',
+          placeholder: 'Оберіть район доставки',
+          options: [
+            { value: '1', text: 'Голосіївський' },
+            { value: '2', text: 'Оболонський' },
+            { value: '3', text: 'Печерський' },
+            { value: '4', text: 'Дарницький' },
+            { value: '5', text: 'Деснянський' },
+            { value: '6', text: 'Подільський' },
+          ],
+        },
+      ],
+      delivery_type: [
+        {
+          type: 'Самовивіз з відділення Нової пошти',
+          value: 'За тарифами перевізника',
+        },
+        {
+          type: 'Кур’єром Нової пошти',
+          value: 'За тарифами перевізника',
+        },
+        {
+          type: 'Самовивіз з магазину',
+          value: 'Безкоштовно',
+        },
+        {
+          type: 'Доставка закордон',
+          value: 'За тарифами перевізника',
+        },
+      ],
+      payment: [
+        {
+          type: 'Оплата при отриманні',
+          description: 'За тарифами перевізника',
+        },
+        {
+          type: 'Оплатити зараз',
+        },
+      ],
+      contact: {
+        surname: {
+          lable: 'Прізвище',
+          placeholder: 'Іванов',
+          caption: 'Введіть прізвище',
+        },
+        name: {
+          lable: 'Ім’я',
+          placeholder: 'Іван',
+          caption: 'Введіть Ім’я',
+        },
+        phone: {
+          lable: 'Мобільний телефон',
+          caption: 'Введіть телефон',
+        },
+        email: {
+          lable: 'Пошта',
+          placeholder: 'ivanivanov@ukr.net',
+          caption: 'Введіть Пошту',
+        },
+      },
+      coment: 'Коментар',
+    },
+    coupon: {
+      select: {
+        available_coupon: {
+          lable: 'Наявні купони',
+          placeholder: 'Виберіть купон',
+          options: [
+            { value: '1', text: 'SEEYALATER' },
+            { value: '2', text: 'HOTEL10' },
+            { value: '3', text: 'DOWNLOAD25' },
+          ],
+        },
+        friend_coupon: {
+          lable: 'Купони за запрошених друзів',
+          placeholder: 'Виберіть купон',
+          options: [
+            { value: '1', text: 'TRAVEL5' },
+            { value: '2', text: '75VACA' },
+            { value: '3', text: '150VACA' },
+          ],
+        },
+      },
+      add: {
+        friend: {
+          lable: 'Запросіть друзів та отримайте ще купонів',
+          caption:
+            'Напишіть електронні адреси/телефон друзів через “;”',
+        },
+        colleague: {
+          lable: 'Запросити колег',
+          caption:
+            'Напишіть електронні адреси/телефон колег через “;”',
+        },
+      },
+    },
+    quiz: {
+      title: 'Домоможи краще нам тебе зрозуміти',
+      preference: {
+        title:
+          'Який тип обладнання ви зацікавлені в придбанні?',
+        options: [
+          'Смартфони',
+          'Ноутбуки',
+          'Планшети',
+          'ПК',
+          'Телевізори',
+        ],
+      },
+      your_expirience: {
+        label: 'Який у Вас досвід користування ПК',
+      },
+      purchase_frequency: {
+        label: 'Як часто ви купуєте обладнання?',
+        placeholder: 'Оберіть варіант',
+        options: [
+          { value: '1', text: 'Раз в тиждень' },
+          { value: '2', text: 'Раз в місяць' },
+          { value: '3', text: 'Раз в рік' },
+        ],
+      },
+      factors: {
+        title:
+          'Які з наведених нижче факторів є для вас важливими при купівлі обладнання?',
+        options: [
+          'Ціна',
+          'Репутація бренду',
+          'Якість',
+          'Особливості',
+          'Гарантія',
+          'Доступність',
+          'Обслуговування клієнтів',
+        ],
+      },
+    },
     footer: [
       [
         {
