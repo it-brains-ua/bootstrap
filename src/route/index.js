@@ -116,7 +116,6 @@ router.get('/shopnews', function (req, res) {
         {
           text: 'Show More',
           link: 'https://www.youtube.com/',
-          rel: 'show-more',
         },
       ],
     },
