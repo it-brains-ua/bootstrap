@@ -43,15 +43,16 @@ router.get('/shopproduct', function (req, res) {
       img: 'https://picsum.photos/400/200',
 
       info: {
-        title: "Product PC Asus 331 BC 671",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        title: 'Product PC Asus 331 BC 671',
+        about:
+          "Some quick example text to build on the card title and make up the bulk of the card's content.",
         price: '1000$',
-        
+
         category: [
-          { name: "HOT", isHot: true },
-          { name: "New", isNew: true },
-          { name: "Bonus", isBonus: true }
-        ]
+          { name: 'HOT', isHot: true },
+          { name: 'New', isNew: true },
+          { name: 'Bonus', isBonus: true },
+        ],
       },
 
       actionList: [
@@ -63,27 +64,23 @@ router.get('/shopproduct', function (req, res) {
 
       alert: {
         isError: true,
-        text: "Danger! This is a danger alert — check it out!"
+        text: 'Danger! This is a danger alert — check it out!',
       },
 
       param: {
         title: 'Product params',
-        list: [
-          'Экран 15.6',
-          'IPS (1920x1080)',
-          'Full HD'
-        ]
+        list: ['Экран 15.6', 'IPS (1920x1080)', 'Full HD'],
       },
 
       item: {
-        head: ["#", "color", "price"],
+        head: ['#', 'color', 'price'],
 
         body: [
-          ["id312", 'red', '1100$'],
-          ["id532", 'blue', '1050$'],
-          ["id643", 'dark', '999$'],
-        ] 
-      }
+          ['id312', 'red', '1100$'],
+          ['id532', 'blue', '1050$'],
+          ['id643', 'dark', '999$'],
+        ],
+      },
     },
 
     goodsOtherBlock: {
@@ -116,7 +113,6 @@ router.get('/shopproduct', function (req, res) {
       ],
     },
 
-  
     service: {
       title: 'Our Services',
       description:
@@ -125,7 +121,7 @@ router.get('/shopproduct', function (req, res) {
         {
           text: 'Show More',
           link: 'https://www.youtube.com/',
-          type: 'show-more',
+          rel: 'show-more',
         },
       ],
     },
