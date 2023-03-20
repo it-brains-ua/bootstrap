@@ -64,6 +64,7 @@ router.get('/shoporder', function (req, res) {
           },
           phone: {
             lable: 'Мобільний телефон',
+            placeholder: '+38 (XXX) XXX XX XX',
             caption: 'Введіть телефон',
           },
           email: {
@@ -184,6 +185,7 @@ router.get('/shoporder', function (req, res) {
         },
         phone: {
           lable: 'Мобільний телефон',
+          placeholder: '+38 (XXX) XXX XX XX',
           caption: 'Введіть телефон',
         },
         email: {
@@ -192,7 +194,10 @@ router.get('/shoporder', function (req, res) {
           caption: 'Введіть Пошту',
         },
       },
-      coment: 'Коментар',
+      coment: {
+        lable: 'Коментар',
+        placeholder: 'Я хочу, щоб',
+      },
     },
     coupon: {
       select: {
@@ -218,11 +223,15 @@ router.get('/shoporder', function (req, res) {
       add: {
         friend: {
           lable: 'Запросіть друзів та отримайте ще купонів',
+          placeholder:
+            'Введіть контактні дані друзів через ;',
           caption:
             'Напишіть електронні адреси/телефон друзів через “;”',
         },
         colleague: {
           lable: 'Запросити колег',
+          placeholder:
+            'Введіть контактні дані колег через ;',
           caption:
             'Напишіть електронні адреси/телефон колег через “;”',
         },
