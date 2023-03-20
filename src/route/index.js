@@ -180,12 +180,12 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Register Now',
           link: 'https://www.youtube.com/',
-          type: 'registration',
+          rel: 'registration',
         },
         {
           text: 'Buy Subscription',
           link: 'https://www.youtube.com/',
-          type: 'subscription',
+          rel: 'subscription',
         },
       ],
     },
@@ -197,7 +197,7 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Show More',
           link: 'https://www.youtube.com/',
-          type: 'show-more',
+          rel: 'show-more',
         },
       ],
     },
