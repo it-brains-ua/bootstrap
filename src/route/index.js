@@ -102,7 +102,7 @@ router.get('/shopcart', function (req, res) {
         {
           text: 'Оформити замовлення',
           link: 'https://www.youtube.com/',
-          isPrimary: true,
+          isSuccess: true,
         },
         {
           text: 'Офрмити кредит',
