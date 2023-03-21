@@ -62,16 +62,6 @@ router.get('/shopproduct', function (req, res) {
         { name: 'Share', isGood: true },
       ],
 
-      alert: {
-        isError: true,
-        text: 'Danger! This is a danger alert — check it out!',
-      },
-
-      param: {
-        title: 'Product params',
-        list: ['Экран 15.6', 'IPS (1920x1080)', 'Full HD'],
-      },
-
       item: {
         head: ['#', 'color', 'price'],
 
@@ -81,6 +71,17 @@ router.get('/shopproduct', function (req, res) {
           ['id643', 'dark', '999$'],
         ],
       },
+      
+      param: {
+        title: 'Product params',
+        list: ['Экран 15.6', 'IPS (1920x1080)', 'Full HD'],
+      },
+
+      alert: {
+        isError: true,
+        text: 'Danger! This is a danger alert — check it out!',
+      },
+      
     },
 
     goodsOtherBlock: {
