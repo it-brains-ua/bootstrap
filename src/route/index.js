@@ -8,11 +8,11 @@ const router = express.Router()
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/shopproduct', function (req, res) {
+router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shopproduct', {
+  res.render('shopcart', {
     layout: 'shop',
     navigation: {
       links: [
@@ -32,55 +32,84 @@ router.get('/shopproduct', function (req, res) {
       Logo: 'Logo',
     },
 
-    breadcrumb: [
-      { name: 'Home', url: 'https://github.com/' },
-      { name: 'PC', url: 'https://www.google.com/' },
-      { name: 'Windows', url: 'https://github.com/' },
-      { name: 'Product PC #3123', url: null },
+    header: {
+      title: 'Кошик',
+      button: {
+        text: 'Продовжити покупки',
+        link: 'https://www.youtube.com/',
+      },
+    },
+
+    goodsBlock: [
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Samsung Galaxy S21 Ultra ',
+        description:
+          'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Ноутбук Dell XPS 13',
+        description:
+          'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Телевізор LG OLED CX',
+        description:
+          'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Навушники Sony WH-1000XM4',
+        description:
+          'Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
     ],
 
-    productData: {
-      img: 'https://picsum.photos/400/200',
-
-      info: {
-        title: 'Product PC Asus 331 BC 671',
-        about:
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        price: '1000$',
-
-        category: [
-          { name: 'HOT', isHot: true },
-          { name: 'New', isNew: true },
-          { name: 'Bonus', isBonus: true },
-        ],
-      },
-
-      actionList: [
-        { name: 'Buy', isWarning: true },
-        { name: 'Add to cart', isError: true },
-        { name: 'Like', isSuccess: true },
-        { name: 'Share', isGood: true },
+    total: {
+      title: 'Сума замовлення',
+      amount: '75 000 ₴',
+      delivery: 'Без доставки',
+      buttons: [
+        {
+          text: 'Оформити замовлення',
+          link: 'https://www.youtube.com/',
+          isPrimary: true,
+        },
+        {
+          text: 'Офрмити кредит',
+          link: 'https://www.youtube.com/',
+          isOutline: true,
+        },
       ],
-
-      alert: {
-        isError: true,
-        text: 'Danger! This is a danger alert — check it out!',
-      },
-
-      param: {
-        title: 'Product params',
-        list: ['Экран 15.6', 'IPS (1920x1080)', 'Full HD'],
-      },
-
-      item: {
-        head: ['#', 'color', 'price'],
-
-        body: [
-          ['id312', 'red', '1100$'],
-          ['id532', 'blue', '1050$'],
-          ['id643', 'dark', '999$'],
-        ],
-      },
     },
 
     goodsOtherBlock: {
@@ -113,15 +142,18 @@ router.get('/shopproduct', function (req, res) {
       ],
     },
 
-    service: {
-      title: 'Our Services',
+    subscribe: {
+      header: 'Unlock Premium Content',
       description:
-        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
+        'Subscribe to access exclusive content and features.',
       buttons: [
         {
-          text: 'Show More',
+          text: 'Register Now',
           link: 'https://www.youtube.com/',
-          rel: 'show-more',
+        },
+        {
+          text: 'Buy Subscription',
+          link: 'https://www.youtube.com/',
         },
       ],
     },
