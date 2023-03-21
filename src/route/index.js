@@ -32,130 +32,178 @@ router.get('/shopcart', function (req, res) {
       Logo: 'Logo',
     },
 
-    header: {
-      title: 'Кошик',
-      button: {
-        text: 'Продовжити покупки',
-        link: 'https://www.youtube.com/',
+    header: 'Мої замовлення',
+
+    purchase: {
+      tabs: ['Всі замовлення', 'Гарантія та повернення'],
+      actionBlock: {
+        input: { placeholder: 'Placeholder' },
+        buttons: [
+          {
+            text: 'Знайти',
+            link: 'https://www.youtube.com/',
+            isSuccess: true,
+          },
+          {
+            text: 'Виділити все',
+            link: 'https://www.youtube.com/',
+            isOutline: true,
+          },
+          {
+            text: 'Очистити все',
+            link: 'https://www.youtube.com/',
+            isDanger: true,
+          },
+        ],
       },
+      itemList: [
+        {
+          number: '№12587463 від 01.01.2023',
+          status: 'Виконано',
+          amount: { title: 'Сума', value: '25 000 ₴' },
+          images: ['https://picsum.photos/110/100'],
+          button: {
+            text: 'Детальніше',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+        },
+        {
+          number: '№12587463 від 01.01.2023',
+          status: 'Виконано',
+          amount: { title: 'Сума', value: '25 000 ₴' },
+          images: [
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+          ],
+          button: {
+            text: 'Детальніше',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+        },
+        {
+          number: '№12587463 від 01.01.2023',
+          status: 'Виконано',
+          amount: { title: 'Сума', value: '25 000 ₴' },
+          images: [
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+          ],
+          button: {
+            text: 'Детальніше',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+        },
+      ],
     },
-
-    goodsBlock: [
-      {
-        image: 'https://picsum.photos/110/110',
-        name: 'Samsung Galaxy S21 Ultra ',
-        description:
-          'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
+    userInfo: {
+      title: 'Особиста інформація',
+      profileData: {
+        title: 'Особисті дані',
+        fullName: {
+          surname: {
+            title: 'Прізвище',
+            value: 'Іванов',
+          },
+          name: {
+            title: 'Ім’я',
+            value: 'Іван',
+          },
+          middleName: {
+            title: 'По-батькові',
+            value: 'Іванович',
+          },
+        },
+        otherInfo: {
+          birthday: {
+            title: 'Дата народження',
+            value: '01.01.2000',
+          },
+          sex: {
+            title: 'Стать',
+            value: 'Чоловіча',
+          },
+          language: {
+            title: 'Мова',
+            value: 'Українська',
+          },
+        },
       },
-      {
-        image: 'https://picsum.photos/110/110',
-        name: 'Ноутбук Dell XPS 13',
-        description:
-          'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
-      },
-      {
-        image: 'https://picsum.photos/110/110',
-        name: 'Телевізор LG OLED CX',
-        description:
-          'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
-      },
-      {
-        image: 'https://picsum.photos/110/110',
-        name: 'Навушники Sony WH-1000XM4',
-        description:
-          'Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
-      },
-    ],
-
-    total: {
-      title: 'Сума замовлення',
-      amount: '75 000 ₴',
-      delivery: 'Без доставки',
       buttons: [
         {
-          text: 'Оформити замовлення',
+          text: 'Редагувати',
           link: 'https://www.youtube.com/',
           isPrimary: true,
         },
         {
-          text: 'Офрмити кредит',
+          text: 'Очистити',
           link: 'https://www.youtube.com/',
-          isOutline: true,
+          isSecondary: true,
+        },
+        {
+          text: 'Видалити',
+          link: 'https://www.youtube.com/',
+          isDanger: true,
         },
       ],
-    },
-
-    goodsOtherBlock: {
-      title: 'See other products',
-      cards: [
-        {
-          image: 'https://picsum.photos/400/200',
-          title: 'iPhone 13',
-          description:
-            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
-          isHot: false,
-          idNew: false,
+      recipients: {
+        title: 'Отримувачі',
+        users: [
+          {
+            name: 'Іванов Іван Іванович',
+            phone: '+38 (098) 222 22 22',
+            button: {
+              text: 'Редагувати',
+              link: 'https://www.youtube.com/',
+            },
+          },
+          {
+            name: 'Петров Петро Петрович',
+            phone: '+38 (098) 111 11 11',
+            button: {
+              text: 'Редагувати',
+              link: 'https://www.youtube.com/',
+            },
+          },
+        ],
+      },
+      contacts: {
+        title: 'Контакти',
+        contactData: {
+          phone: {
+            title: 'Номер телефону',
+            value: '+38 (098) 222 22 22',
+          },
+          additionalPhone: {
+            title: 'Додатковий номер телефону',
+            value: '+38 (098) 111 11 11',
+          },
+          email: {
+            title: 'Електронна адреса',
+            value: 'ivanivanov@ukr.net',
+          },
         },
-        {
-          image: 'https://picsum.photos/400/200',
-          title: 'MacBook Pro',
-          description:
-            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
-          isHot: true,
-          idNew: false,
-        },
-        {
-          image: 'https://picsum.photos/400/200',
-          title: 'AirPods Pro',
-          description:
-            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
-          isHot: false,
-          idNew: false,
-        },
-      ],
-    },
-
-    subscribe: {
-      header: 'Unlock Premium Content',
-      description:
-        'Subscribe to access exclusive content and features.',
-      buttons: [
-        {
-          text: 'Register Now',
-          link: 'https://www.youtube.com/',
-        },
-        {
-          text: 'Buy Subscription',
-          link: 'https://www.youtube.com/',
-        },
-      ],
+        buttons: [
+          {
+            text: 'Редагувати',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+          {
+            text: 'Очистити',
+            link: 'https://www.youtube.com/',
+            isSecondary: true,
+          },
+          {
+            text: 'Видалити',
+            link: 'https://www.youtube.com/',
+            isDanger: true,
+          },
+        ],
+      },
     },
 
     footer: [
