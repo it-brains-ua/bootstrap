@@ -31,160 +31,248 @@ router.get('/shopreview', function (req, res) {
       ],
       Logo: 'Logo',
     },
-    formBlock: {
-      header: 'Відгуки покупців про Ноут',
-      rating: {
-        title: 'Оцінка',
-        value: '4.5/5',
+    breadcrumb: [
+      { name: 'Головна', url: 'https://github.com/' },
+      {
+        name: "Комп'ютери та ноутбуки",
+        url: 'https://www.google.com/',
       },
-      actionBlock: {
-        tabs: [
-          { text: 'Про товар' },
-          { text: 'Характеристики' },
-          { text: 'Відгуки', isActive: true },
+      { name: 'Ноутбуки', url: null },
+    ],
+    header: 'Ноутбуки',
+    sortBlock: [
+      {
+        placeholder: 'За ціною',
+        options: [
+          { value: '1', text: 'За зростанням' },
+          { value: '2', text: 'За спаданням' },
         ],
-        field: {
-          placeholder: 'Залиште відгук про товар',
-          button: {
-            text: 'Написати відгук',
-            link: 'https://www.youtube.com/',
-          },
+      },
+      {
+        placeholder: 'За новизною',
+        options: [
+          { value: '1', text: 'Спочатку нові' },
+          { value: '2', text: 'Спочатку старі' },
+        ],
+      },
+      {
+        placeholder: 'За рейтингом',
+        options: [
+          { value: '1', text: 'За зростанням' },
+          { value: '2', text: 'За спаданням' },
+        ],
+      },
+    ],
+    filterBlock: {
+      sellers: {
+        title: 'Продавець',
+        list: [{ value: 'Machinery' }, { value: 'інші' }],
+      },
+      brands: {
+        title: 'Бренд',
+        input: {
+          placeholder: 'Пошук',
+        },
+        options: [
+          { value: 'Acer' },
+          { value: 'Apple' },
+          { value: 'Asus' },
+          { value: 'Dell' },
+        ],
+      },
+      price: {
+        title: 'Ціна',
+        range: {
+          from: '8 000',
+          to: '30 000',
+        },
+        button: {
+          text: 'OK',
+          link: 'https://www.youtube.com/',
         },
       },
-      feedbackBlock: {
-        title:
-          'Хочете поділитись своєю думкою про наш магазин?',
-        buttons: [
-          {
-            text: 'Додати відгук',
-            isWarning: true,
-            link: 'https://www.youtube.com/',
-          },
-          {
-            text: 'Позитивні відгуки',
-            isSuccess: true,
-            link: 'https://www.youtube.com/',
-          },
-          {
-            text: 'Негативні відгуки',
-            isDanger: true,
-            link: 'https://www.youtube.com/',
-          },
-        ],
-      },
-      goodsInfo: {
-        photo: 'https://picsum.photos/110/100',
-        name: 'Ноут Asus',
+
+      filterList: [
+        {
+          title: 'Готов к отправке',
+          options: [{ value: 'Готов к отправке' }],
+        },
+        {
+          title: 'Процесор',
+          options: [
+            { value: 'Intel Core i7' },
+            { value: 'Intel Core i5' },
+            { value: 'Intel Core i3' },
+            { value: 'AMD Ryzen 9' },
+          ],
+        },
+        {
+          title: 'Діагональ екрану',
+          options: [
+            { value: '13' },
+            { value: '14' },
+            { value: '15-16' },
+            { value: '17-18' },
+            { value: '9 - 12.5' },
+          ],
+        },
+        {
+          title: 'Оперативна пам’ять',
+          options: [
+            { value: '10 - 12ГБ' },
+            { value: '16 - 24ГБ' },
+            { value: '32ГБ і більше' },
+            { value: '4ГБ' },
+            { value: '6 - 8ГБ' },
+          ],
+        },
+        {
+          title: 'Операційна система',
+          options: [
+            { value: 'Chrome OS' },
+            { value: 'Linux' },
+            { value: 'Windows' },
+            { value: 'Mac OS' },
+            { value: 'Без ОС' },
+          ],
+        },
+      ],
+    },
+    goodsList: [
+      {
+        img: 'https://picsum.photos/400/200',
+        isHot: true,
+        isNew: true,
+        isFast: true,
+        isFree: true,
+        name: 'Ноут',
+        review: {
+          amount: 13,
+          text: 'відгуків',
+        },
         price: '25 000 ₴',
+        delivery: 'Готовий до відправки',
         buttons: [
           {
-            text: 'Купити',
-            isPrimary: true,
+            text: 'Купити зараз',
             link: 'https://www.youtube.com/',
+            isPrimary: true,
           },
           {
             text: 'Купити в кредит',
-            isSecondary: true,
             link: 'https://www.youtube.com/',
+            isSecondary: true,
           },
         ],
-        seller: {
-          title: 'Продавець',
-          value: 'Machinery',
-        },
-      },
-    },
-
-    reviewList: [
-      {
-        title: {
-          userName: 'Іван Іванов',
-          caption: 'Відгук покупця',
-          date: '1 січня 2023',
-        },
-        reviewBody: {
-          seller: {
-            title: 'Продавець',
-            value: 'Machinery',
+        characteristics: [
+          { title: 'Діагональ', value: '15,6' },
+          { title: 'Екран', value: 'IPS' },
+          {
+            title: 'Процесор',
+            value: 'Intel Core i5-1135G7',
           },
-          rating: {
-            title: 'Оцінка',
-            value: '5/5',
-          },
-          text: [
-            "Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.",
-            ' Однак, можливі проблеми з перегрівом під час тривалого використання, та може бути недостатньої ємності жорсткого диска для потреб користувача. Крім того, ціна може бути дещо високою порівняно з аналогічними моделями.',
-          ],
-          advantages: {
-            title: 'Переваги',
-            text: 'Дизайн, швидкість роботи, обсяг пам’яті, акумулятор',
-          },
-          disadvantages: {
-            title: 'Недоліки',
-            text: 'Перегрів, ємкість жосткого диску',
-          },
-          images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-          ],
-          coments: [
-            {
-              userName: 'Користувач',
-              date: '1 січня 2023',
-              text: 'Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.',
-            },
-            {
-              userName: 'Користувач',
-              date: '3 січня 2023',
-              text: 'Дякую за корисний відгук! Це допомогло мені зробити вибір щодо покупки ноутбука.',
-            },
-            {
-              userName: 'Користувач',
-              date: '10 січня 2023',
-              text: 'Дякую за відгук, але я хотів би дізнатися більше деталей про проблеми з перегрівом, щоб зробити зважений вибір перед покупкою.',
-            },
-          ],
-        },
+          { title: 'Оперативна пам’ять', value: '8 ГБ' },
+        ],
       },
       {
-        title: {
-          userName: 'Петро Петров',
-          caption: 'Відгук покупця',
-          date: '1 січня 2023',
+        img: 'https://picsum.photos/400/200',
+        isFree: true,
+        name: 'Ноут',
+        review: {
+          amount: 13,
+          text: 'відгуків',
         },
-        reviewBody: {
-          seller: {
-            title: 'Продавець',
-            value: 'Machinery',
+        price: '25 000 ₴',
+        delivery: 'Готовий до відправки',
+        buttons: [
+          {
+            text: 'Купити зараз',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
           },
-          rating: {
-            title: 'Оцінка',
-            value: '5/5',
+          {
+            text: 'Купити в кредит',
+            link: 'https://www.youtube.com/',
+            isSecondary: true,
           },
-          text: [
-            "Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.",
-          ],
-          advantages: {
-            title: 'Переваги',
-            text: 'Обсяг пам’яті, акумулятор',
+        ],
+        characteristics: [
+          { title: 'Діагональ', value: '15,6' },
+          { title: 'Екран', value: 'IPS' },
+          {
+            title: 'Процесор',
+            value: 'Intel Core i5-1135G7',
           },
-          disadvantages: {
-            title: 'Недоліки',
-            text: 'Не виявлено',
-          },
-          images: ['https://picsum.photos/110/100'],
-          coments: [
-            {
-              userName: 'Користувач',
-              date: '1 січня 2023',
-              text: 'Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.',
-            },
-          ],
+          { title: 'Оперативна пам’ять', value: '8 ГБ' },
+        ],
+      },
+      {
+        img: 'https://picsum.photos/400/200',
+        isHot: true,
+        isFree: true,
+        name: 'Ноут',
+        review: {
+          amount: 13,
+          text: 'відгуків',
         },
+        price: '25 000 ₴',
+        delivery: 'Готовий до відправки',
+        buttons: [
+          {
+            text: 'Купити зараз',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+          {
+            text: 'Купити в кредит',
+            link: 'https://www.youtube.com/',
+            isSecondary: true,
+          },
+        ],
+        characteristics: [
+          { title: 'Діагональ', value: '15,6' },
+          { title: 'Екран', value: 'IPS' },
+          {
+            title: 'Процесор',
+            value: 'Intel Core i5-1135G7',
+          },
+          { title: 'Оперативна пам’ять', value: '8 ГБ' },
+        ],
+      },
+      {
+        img: 'https://picsum.photos/400/200',
+        isHot: true,
+        isFast: true,
+        name: 'Ноут',
+        review: {
+          amount: 13,
+          text: 'відгуків',
+        },
+        price: '25 000 ₴',
+        delivery: 'Готовий до відправки',
+        buttons: [
+          {
+            text: 'Купити зараз',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+          {
+            text: 'Купити в кредит',
+            link: 'https://www.youtube.com/',
+            isSecondary: true,
+          },
+        ],
+        characteristics: [
+          { title: 'Діагональ', value: '15,6' },
+          { title: 'Екран', value: 'IPS' },
+          {
+            title: 'Процесор',
+            value: 'Intel Core i5-1135G7',
+          },
+          { title: 'Оперативна пам’ять', value: '8 ГБ' },
+        ],
       },
     ],
-
     service: {
       title: 'Our Services',
       description:
