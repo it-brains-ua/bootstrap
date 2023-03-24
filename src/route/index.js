@@ -53,22 +53,22 @@ router.get('/shoporder', function (req, res) {
       form: {
         input: {
           surname: {
-            lable: 'Прізвище',
+            label: 'Прізвище',
             placeholder: 'Іванов',
             caption: 'Введіть прізвище',
           },
           name: {
-            lable: 'Ім’я',
+            label: 'Ім’я',
             placeholder: 'Іван',
             caption: 'Введіть Ім’я',
           },
           phone: {
-            lable: 'Мобільний телефон',
+            label: 'Мобільний телефон',
             placeholder: '+38 (XXX) XXX XX XX',
             caption: 'Введіть телефон',
           },
           email: {
-            lable: 'Пошта',
+            label: 'Пошта',
             placeholder: 'ivanivanov@ukr.net',
             caption: 'Введіть Пошту',
           },
@@ -173,36 +173,38 @@ router.get('/shoporder', function (req, res) {
         },
       ],
       contact: {
+        title: 'Контактні дані отримувача',
         surname: {
-          lable: 'Прізвище',
+          label: 'Прізвище',
           placeholder: 'Іванов',
           caption: 'Введіть прізвище',
         },
         name: {
-          lable: 'Ім’я',
+          label: 'Ім’я',
           placeholder: 'Іван',
           caption: 'Введіть Ім’я',
         },
         phone: {
-          lable: 'Мобільний телефон',
+          label: 'Мобільний телефон',
           placeholder: '+38 (XXX) XXX XX XX',
           caption: 'Введіть телефон',
         },
         email: {
-          lable: 'Пошта',
+          label: 'Пошта',
           placeholder: 'ivanivanov@ukr.net',
           caption: 'Введіть Пошту',
         },
       },
       coment: {
-        lable: 'Коментар',
+        label: 'Коментар',
         placeholder: 'Я хочу, щоб',
       },
     },
     coupon: {
+      title: 'Купони',
       select: {
-        available_coupon: {
-          lable: 'Наявні купони',
+        availabel_coupon: {
+          label: 'Наявні купони',
           placeholder: 'Виберіть купон',
           options: [
             { value: '1', text: 'SEEYALATER' },
@@ -211,7 +213,7 @@ router.get('/shoporder', function (req, res) {
           ],
         },
         friend_coupon: {
-          lable: 'Купони за запрошених друзів',
+          label: 'Купони за запрошених друзів',
           placeholder: 'Виберіть купон',
           options: [
             { value: '1', text: 'TRAVEL5' },
@@ -222,14 +224,14 @@ router.get('/shoporder', function (req, res) {
       },
       add: {
         friend: {
-          lable: 'Запросіть друзів та отримайте ще купонів',
+          label: 'Запросіть друзів та отримайте ще купонів',
           placeholder:
             'Введіть контактні дані друзів через ;',
           caption:
             'Напишіть електронні адреси/телефон друзів через “;”',
         },
         colleague: {
-          lable: 'Запросити колег',
+          label: 'Запросити колег',
           placeholder:
             'Введіть контактні дані колег через ;',
           caption:
