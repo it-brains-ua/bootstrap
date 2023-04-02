@@ -163,15 +163,18 @@ router.get('/shoporder', function (req, res) {
           value: 'За тарифами перевізника',
         },
       ],
-      payment: [
-        {
-          type: 'Оплата при отриманні',
-          description: 'За тарифами перевізника',
-        },
-        {
-          type: 'Оплатити зараз',
-        },
-      ],
+      payment: {
+        title: 'Оплата',
+        list: [
+          {
+            type: 'Оплата при отриманні',
+            description: 'За тарифами перевізника',
+          },
+          {
+            type: 'Оплатити зараз',
+          },
+        ],
+      },
       contact: {
         title: 'Контактні дані отримувача',
         surname: {
