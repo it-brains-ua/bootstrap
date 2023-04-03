@@ -43,8 +43,8 @@ router.get('/shopreview', function (req, res) {
           { text: 'Характеристики' },
           { text: 'Відгуки', isActive: true },
         ],
-        field: {
-          placeholder: 'Залиште відгук про товар',
+        report: {
+          title: 'Залиште відгук про товар',
           button: {
             text: 'Написати відгук',
             link: 'https://www.youtube.com/',
