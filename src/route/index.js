@@ -76,6 +76,7 @@ router.get('/shopreview', function (req, res) {
         photo: 'https://picsum.photos/110/100',
         name: 'Ноут Asus',
         price: '25 000 ₴',
+        inMarket: true,
         buttons: [
           {
             text: 'Купити',
