@@ -29,7 +29,6 @@ router.get('/shopreview', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-      Logo: 'Logo',
     },
     formBlock: {
       header: 'Відгуки покупців про Ноут',
