@@ -29,7 +29,6 @@ router.get('/shopcatalog', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-      Logo: 'Logo',
     },
     breadcrumb: [
       { name: 'Головна', url: 'https://github.com/' },
