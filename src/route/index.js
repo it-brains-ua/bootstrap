@@ -33,7 +33,6 @@ router.get('/shoporder', function (req, res) {
           href: null,
         },
       ],
-      Logo: 'Logo',
     },
 
     header: 'Оформлення замовлення',
@@ -148,19 +147,15 @@ router.get('/shoporder', function (req, res) {
       delivery_type: [
         {
           type: 'Самовивіз з відділення Нової пошти',
-          value: 'За тарифами перевізника',
         },
         {
           type: 'Кур’єром Нової пошти',
-          value: 'За тарифами перевізника',
         },
         {
           type: 'Самовивіз з магазину',
-          value: 'Безкоштовно',
         },
         {
           type: 'Доставка закордон',
-          value: 'За тарифами перевізника',
         },
       ],
       payment: {
