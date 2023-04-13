@@ -29,7 +29,6 @@ router.get('/shophome', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-      Logo: 'Logo',
     },
 
     newsBlock: {
