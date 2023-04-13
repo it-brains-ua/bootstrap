@@ -29,7 +29,6 @@ router.get('/shopprofile', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-      Logo: 'Logo',
     },
 
     header: 'Мої замовлення',
