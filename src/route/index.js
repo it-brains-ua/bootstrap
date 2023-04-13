@@ -29,7 +29,6 @@ router.get('/shopproduct', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-      Logo: 'Logo',
     },
 
     breadcrumb: [
