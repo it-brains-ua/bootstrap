@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div>
+            {{#with js}}
+            <div>
+                <h1>{{name}}</h1>
+
+                {{#with data}}
+                <div>
+                   <p>{{data: name={'javascript'} }}</p>
+                </div>
+                {{/with}} 
+                    <br>
+
+                {{#each data}}
+                   <div>
+                     <p>{{description:'JavaScript is a popular high-level, dynamic, and interpreted programming language.'}}</p>
+                     <h2> {{history:}}</h2>
+                     <h3> {{year: 1995}}</h3>
+                     <h4> {{founder: 'Brendan Eich'}}</h4>
+                   </div>
+                {{/each}}
+                    <br>
+
+                 {{#each types}}
+                  <h5>
+                    {{types: ['Number','String', 'Boolean', 'Null','Undefined','Symbol','Object'}}
+                  </h5>
+                 {{/each}}
+                    <br>
+
+                 {{#each santax}}
+                      <h6> {{variables: 'var', 'let', 'const'}}</h6>
+                      <p>  {{functions: 'function'}}</p>
+                      <p>  {{conditionals: 'if', 'else', 'switch'}}</p>
+                     <span>{{loops: 'for', 'while', 'do-while'}}</span>
+                        <b>{{classes: 'class'}} </b>
+                 {{/each}}
+
+            </div>
+            {{/with}}
+        </div>
+    </head>
+</html>
