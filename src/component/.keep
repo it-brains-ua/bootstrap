@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div>
+            {{#with mac}}
+              <div>
+                <h1>{{name}}</h1>
+
+                {{#with data}}
+                <div>
+                   <p>{{name: 'Apple MacBook Pro'}}</p>
+                   <h1>{{description: 'The ultimate notebook for power users'}}</h1>
+                   <h2>{{price: 1999.99}}</h2>
+                   <h3>{{category: 'Computers & Tablets'}}</h3>
+                </div>
+                {{/with}} 
+                    <br>
+
+                {{#each data}}
+                    {{#with processor}}
+                        <div>
+                          <span>{{brand: 'Intel'}}</span>
+                          <samp>{{model: 'Core i9'}}</samp>
+                          <b>{{speed: '2.3 GHz'}}</b>
+                          <p>{{cores: 8}}</p>
+                          <article>{{cache: '16 MB'}}</article>
+                        </div>
+                    {{/with}}    
+                {{/each}}
+                    <br>
+
+                 {{#each types}}
+                 <div>
+                    <h4>{{ type: 'DDR4'}}</h4>
+                    <h5>{{size: '32 GB'}}</h5>
+                    <h6>{{speed: '2666 MHz'}}</h6>
+                    <var>{{type: 'SSD'}}</var>
+                    <abbr>{{size: '1 TB'}}</abbr>
+                 </div>
+                 {{/each}}
+                    <br>
+              </div>
+            {{/with}}
+        </div>
+    </head>
+</html>
