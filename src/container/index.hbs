@@ -13,3 +13,39 @@
     Цей код містить лише те, що буде виводитись в <body>
     Адже наш layout/default.hbs має вже структуру HTML
 --}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <div>
+            {{#with facebook}}
+              <div>
+                <h1>{{name}}</h1>
+
+                {{#with data}}
+                <div>
+                   <p>{{name: 'Facebook'}}</p>
+                   <h1>{{id: 1}}</h1>
+                   <h2>{{name: 'John Doe'}}</h2>
+                   <h3>{{gender: 'Male'}}</h3>
+                   <h4>{{age: 30}}</h4>
+                </div>
+                {{/with}} 
+                    <br>
+
+                {{#each data}}
+                    {{#with friends}}
+                        <div>
+                          <span>{{id: 2}}</span>
+                          <samp>{{name: 'Jane Smith'}}</samp>
+                          <b>{{gender: 'Female'}}</b>
+                          <article>{{age: 27}}</article>
+                        </div>
+                    {{/with}}    
+                {{/each}}
+                    <br>
+                    <br>
+              </div>
+            {{/with}}
+        </div>
+    </head>
+</html>
