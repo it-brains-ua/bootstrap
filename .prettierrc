@@ -1,7 +1,44 @@
-{
-  "trailingComma": "all",
-  "tabWidth": 2,
-  "semi": false,
-  "singleQuote": true,
-  "printWidth": 60
-}
+<!DOCTYPE html>
+<html>
+    <head>
+        <div>
+            {{#with car}}
+              <div>
+                <h1>{{name}}</h1>
+
+                {{#with data}}
+                <div>
+                   <p>{{data: make={'Toyota'} }}</p>
+                   <h1>{{model:"Camry"}}</h1>
+                   <h2>{{data: year "2022"}}</h2>
+                   <h3>{{color: silver}}</h3>
+                </div>
+                {{/with}} 
+                    <br>
+
+                {{#each data}}
+                   <div>
+                     <span>{{material: 'leather'}}</span>
+                     <samp>{{color: 'black'}}</samp>
+                     <b>{{heted: true}}</b>
+                     <p>{{ventilated: true}}</p>
+                   </div>
+                {{/each}}
+                    <br>
+
+                 {{#each types}}
+                 <div>
+                    <h4>{{material: 'plastic'}}</h4>
+                    <h5>{{color: 'black'}}</h5>
+                    <h6>{{type: 'LCD'}}</h6>
+                    <var>{{size: 10.1}}</var>
+                    <abbr>{{resolution: '1280x720'}}</abbr>
+                    <ul>{{touchscreen: true}}</ul>
+                 </div>
+                 {{/each}}
+                    <br>
+              </div>
+            {{/with}}
+        </div>
+    </head>
+</html>
